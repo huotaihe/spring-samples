@@ -1,0 +1,6 @@
+server:
+  port: 0
+spring:
+  cloud:
+    zookeeper:
+      connect-string: 10.253.115.120:2181

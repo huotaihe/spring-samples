@@ -1,0 +1,15 @@
+server:
+  port: 8081
+
+#user1:
+#  name: zhangsan
+#  age: 9
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: always

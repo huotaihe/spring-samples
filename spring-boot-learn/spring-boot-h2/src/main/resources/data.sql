@@ -1,0 +1,1 @@
+INSERT INTO `t` (`c`, `d`) VALUES (1, 1);

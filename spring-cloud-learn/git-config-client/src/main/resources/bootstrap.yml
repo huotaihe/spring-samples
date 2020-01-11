@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: git-config-client
+  cloud:
+    config:
+      discovery:
+        enabled: true
+        service-id: config-server
+    consul:
+      host: localhost
+      port: 8500
+      discovery:
+        prefer-ip-address: true
