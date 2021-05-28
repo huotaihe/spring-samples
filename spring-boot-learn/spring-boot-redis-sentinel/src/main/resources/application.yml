@@ -1,5 +1,0 @@
-spring:
-  redis:
-    sentinel:
-      master: mymaster
-      nodes: 106.14.199.161:26379,106.14.199.161:26380

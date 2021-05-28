@@ -1,9 +1,0 @@
-server:
-  port: 0
-spring:
-  cloud:
-    consul:
-      discovery:
-        prefer-ip-address: true
-      host: localhost
-      port: 8500

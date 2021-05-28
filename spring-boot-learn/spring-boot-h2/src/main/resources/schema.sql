@@ -1,1 +1,0 @@
-create table `t`(`id` int(11) not null AUTO_INCREMENT, `c` int (11) default null, `d` int(11) default null, primary key (`id`));
