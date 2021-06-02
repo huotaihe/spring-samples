@@ -9,10 +9,10 @@ import org.springframework.stereotype.Component;
  */
 @Component
 public class B {
-
-    public B(A a) {
-
-    }
+    //
+    //public B(A a) {
+    //
+    //}
 
     @Autowired
     private A a;
