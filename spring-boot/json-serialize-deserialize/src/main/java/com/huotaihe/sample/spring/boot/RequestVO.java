@@ -11,4 +11,6 @@ public class RequestVO {
 
     private MemberLevelEnum level;
 
+    private MemberLevelEnum2 levelEnum2;
+
 }
