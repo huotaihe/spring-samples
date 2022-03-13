@@ -10,10 +10,13 @@ import org.powermock.api.mockito.PowerMockito;
  * @author 寒溪
  * @date 2021/06/25
  */
-public class PowermockFirstTest {
+public class PowermockSamplesTest {
 
+    /**
+     * 第一个测试用例
+     */
     @Test
-    public void size() {
+    public void helloWorld() {
 
         List list = PowerMockito.mock(List.class);
         PowerMockito.when(list.size()).thenReturn(100);
