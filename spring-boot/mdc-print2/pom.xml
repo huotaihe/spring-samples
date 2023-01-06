@@ -9,10 +9,10 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.github.huotaihe.spring.boot</groupId>
-    <artifactId>mdc-print2</artifactId>
+    <artifactId>mdc-print</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>mdc-print2</name>
-    <description>mdc-print2</description>
+    <name>mdc-print</name>
+    <description>mdc-print</description>
     <properties>
         <java.version>17</java.version>
     </properties>
