@@ -27,6 +27,8 @@ public class PdfPlaceHolderReplace {
         "$date", "2024.06.21"
     );
 
+    public static final int SCALE = 5;
+
     /**
      * 参考文章 https://blog.csdn.net/ABCAA1024/article/details/118435624
      * @param args
@@ -45,16 +47,16 @@ public class PdfPlaceHolderReplace {
             //}
 
             //根据幻灯片大小生成图片
-            BufferedImage img = new BufferedImage(pageSize.width,pageSize.height, BufferedImage.TYPE_INT_RGB);
+            BufferedImage img = new BufferedImage(pageSize.width,pageSize.height, BufferedImage.TYPE_INT_ARGB);
             Graphics2D graphics = img.createGraphics();
-
-            graphics.setRenderingHint(RenderingHints.KEY_INTERPOLATION, RenderingHints.VALUE_INTERPOLATION_BICUBIC);
             graphics.fill(new Rectangle2D.Float(0, 0, pageSize.width,pageSize.height));
+            graphics.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
+            graphics.setRenderingHint(RenderingHints.KEY_RENDERING, RenderingHints.VALUE_RENDER_QUALITY);
             slide.draw(graphics);
             //slide.ex
 
             //图片将要存放的路径
-            String absolutePath = "/tmp/" + slide.getSlideNumber() + ".jpeg";
+            String absolutePath = "/tmp/" + slide.getSlideNumber() + ".png";
             File jpegFile = new File(absolutePath);
             // 图片路径存放
             //如果图片存在，则不再生成
@@ -65,7 +67,7 @@ public class PdfPlaceHolderReplace {
             FileOutputStream out = new FileOutputStream(jpegFile);
 
             // 写入到图片中去
-            ImageIO.write(img, "jpeg", out);
+            ImageIO.write(img, "png", out);
             out.close();
         }
 
