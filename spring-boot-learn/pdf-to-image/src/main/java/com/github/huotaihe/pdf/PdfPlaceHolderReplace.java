@@ -16,7 +16,20 @@ import org.apache.poi.xslf.usermodel.XSLFShape;
 import org.apache.poi.xslf.usermodel.XSLFSlide;
 import org.apache.poi.xslf.usermodel.XSLFTextShape;
 
+
 public class PdfPlaceHolderReplace {
+
+    static {
+        try {
+            // 注册字体
+            Font customFont = Font.createFont(Font.TRUETYPE_FONT, PdfPlaceHolderReplace.class.getClassLoader().getResourceAsStream("fonts/Alibaba-PuHuiTi-Medium.ttf")).deriveFont(12f);
+            GraphicsEnvironment ge = GraphicsEnvironment.getLocalGraphicsEnvironment();
+            ge.registerFont(customFont);
+        } catch (Exception e) {
+            //log.error("register alibaba font error", e);
+            System.out.println(e);
+        }
+    }
 
     private static final Map<String, String> placeholders = Map.of(
         "$position", "南分-广州区域",
